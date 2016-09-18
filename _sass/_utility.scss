@@ -1,0 +1,32 @@
+@mixin textShadowAnimation() {
+    font-size: xx-large;
+    font-weight: lighter;
+    text-shadow: 0px 2px black;
+    -webkit-animation: text-shadow-animation 1s infinite;
+}
+
+.full-bleed-wrapper {
+    margin: 0;
+    width: 100%;
+}
+
+.center-text {
+    display: table;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    @include textShadowAnimation;
+    span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+
+@-webkit-keyframes text-shadow-animation {
+    0% {text-shadow: 0px 2px black;}
+    25% {text-shadow: 1px 3px black;}
+    50% {text-shadow: -1px -2px black;}
+    75% {text-shadow: -2px 3px black;}
+    100% {text-shadow: 1px 2px black;}
+}

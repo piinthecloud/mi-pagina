@@ -1,0 +1,30 @@
+.pi-header {
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bolder;
+    margin: auto 50px;
+    min-height: 56px;
+    position: relative;
+}
+
+.pi-home {
+    background: url("../images/texture.jpg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.pi-footer {
+    bottom: 0;
+    margin: 20px 50px;
+}
+
+@include media-query($on-palm) {
+    .pi-header {
+        font-size: medium;
+        font-family: monospace;
+        font-weight: bolder;
+        margin:20px;
+        min-height: auto;
+        position: relative;
+    }
+}
